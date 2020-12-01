@@ -1,17 +1,17 @@
-var translateBtn = document.querySelector('#btn-translate');
+var btntranslate = document.querySelector('#btn-translate');
 var txtInput = document.querySelector('#txt-input');
 var outputDiv = document.querySelector('#output');
 
+var serverUrl = "https://api.funtranslations.com/translate/minion.json?text=";
 
-var url = "https://api.funtranslations.com/translate/pig-latin.json";
-
-function serverUrl(text) {
-    return url + "?" + "text=" +text
+function translatedtext(text){
+     return serverUrl + text
 }
 
-function translate() {
-      var textInput = txtInput.value;
-      fetch(serverUrl(textInput))
+function translateHandler(){
+    var inputText = txtInput.value;
+    fetch(translatedtext(inputText)).then( res => res.json() )
+    .then( json => outputDiv.innerText = json.contents.translated )
 }
 
-translateBtn.addEventListener('click',translate);
+btntranslate.addEventListener('click',translateHandler);

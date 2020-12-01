@@ -1,9 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
 #txt-input{
     width: 80%;
     display: block;
-    height: 10vh;
+    height: 20vh;
     padding: 0.5rem;
-    margin: 1rem;
+    margin: 2rem;
+}
+
+#btn-translate{
+    background-color: coral;
+    border: 1px solid coral;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    margin: 0 2rem;
 }
 
 #output{
@@ -11,5 +24,34 @@
     height: 10vh;
     width: 80%;
     padding: 0.5rem;
-    margin: 1rem;
+    margin: 0 2rem;
+}
+
+.container-center{
+    margin:auto;
+    width: 70%;
+}
+
+@media(max-width:500px){
+    .container-center{
+        width:400px;
+    }
+}
+
+.header{
+    background-color: coral;
+    padding: 1rem;
+    text-align: center;
+}
+
+h2{
+    padding: 1rem;
+    text-align: center; 
+}
+
+.about{
+    background: coral;
+    padding:1px 2rem;
+    margin-top: 1rem;
+    text-align: center;
 }
